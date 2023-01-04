@@ -14,6 +14,9 @@
     --bg-color: #fff;
 
 }
+img {
+  z-index: 1;
+}
 
 body {
     background: #007bff;
@@ -41,7 +44,6 @@ li {
     max-width: 1068;
     margin: auto;
     width: 100%;
-
 }
 
 .login {
@@ -56,7 +58,7 @@ li {
 .login:hover {
     background: black;
     color: var(--second-color);
-<<<<<<<<< Temporary merge branch 1
+
 }
 
 
