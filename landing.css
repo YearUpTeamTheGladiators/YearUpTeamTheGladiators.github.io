@@ -22,6 +22,11 @@ body {
     background: #007bff;
     background: linear-gradient(to right, #502C73, #a90aff);
   }
+  .form-control {
+    border-color: #502c73;
+    border-radius: 20px;
+    border-width: 4px;
+}
   
   .btn-login {
     font-size: 1rem;
@@ -30,6 +35,7 @@ body {
   }
   button {
     color: #502C73;
+    z-index: 1;
   }
 
 a{
