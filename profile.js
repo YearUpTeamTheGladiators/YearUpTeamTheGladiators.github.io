@@ -16,6 +16,7 @@ function init () {
     bioBtn.onclick = bioBtnClicked();
     let bioTextField = document.getElementById("bioTextField");
     bioTextField.value = localStorage.getItem("bioText")
+    document.getElementById("recentPostTextField").innerHTML = localStorage.getItem("recentPostText")
 }
 
 function postBtncClicked () {
@@ -37,6 +38,7 @@ function postBtncClicked () {
     })
 
     document.getElementById("recentPostTextField").innerHTML = postTextField.value;
+    localStorage.setItem('recentPostText', document.getElementById("recentPostTextField").innerHTML);
 }
 
 function useProfileName (place) {
