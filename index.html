@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    
   <link rel="stylesheet" href="/global.css">
   <link rel="stylesheet" href="./landing.css">
 
@@ -16,11 +17,11 @@
 
   <title>Login to the Microblog Network!</title>
 
-  <!-- Run BEFORE page is finished loading (before window.onload): -->
-  <script src="/auth.js"></script>
-  <script>
-    if (isLoggedIn() === true) window.location.replace("posts/index.html");
-  </script>
+    <!-- Run BEFORE page is finished loading (before window.onload): -->
+    <script src="/auth.js"></script>
+     <script>
+        if (isLoggedIn() === true) window.location.replace("posts/index.html");
+    </script> 
 </head>
 
 <header>
@@ -87,15 +88,19 @@
             </div>
             <footer>
               <div class="footer container">
-                <p>&#169; highLight All Right Reserved</p>
-                <div class="social">
-                  <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
-                  <a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
-                  <a href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a>
-                  <a href="https://www.linkedin.com/feed/"><i class="fa-brands fa-linkedin"></i></a>
-                </div>
+                  <p>&#169; highLight All Right Reserved</p>
+                  <div class="social">
+                      <a href="https://www.facebook.com/"><i
+                              class="fa-brands fa-facebook"></i></a>
+                      <a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
+                      <a href="https://www.instagram.com/"><i
+                              class="fa-brands fa-instagram"></i></a>
+                      <a href="https://www.linkedin.com/feed/"><i
+                              class="fa-brands fa-linkedin"></i></a>
+                  </div>
               </div>
-            </footer>
+
+          </footer>
           </div>
         </div>
       </div>
