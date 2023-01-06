@@ -20,9 +20,9 @@
 
     <!-- Run BEFORE page is finished loading (before window.onload): -->
     <script src="/auth.js"></script>
-    <!-- <script>
+    <script>
         if (isLoggedIn() === false) window.location.replace("/");
-    </script>  -->
+    </script> 
 </head>
 
 
@@ -49,7 +49,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="/index.html" id="signoutBtn" class="btn py-3" title="Sign out"
+                            <a href="#" id="signoutBtn" class="btn py-3" title="Sign out"
                                 data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Customers">
                                 <i class="bi bi-person-x-fill fs-2 text-dark"></i>
                             </a>
@@ -102,7 +102,7 @@
                                     <div class="p-4 rounded-4 fs-3" style="background-color: #502c73;">
                                         <img src="/images/profileblank.jpg" alt="profile picture" id="profilePicture"
                                             class="img-fluid rounded-circle">
-                                        John Doe
+                                        <span id="recentPostName">John Doe</span>
                                         <p class="my-4 fs-6 fw-normal">Hello
                                             duighknvieygtyuifcmyubvirgncyowcuingvy5u4mghrenyifuncgryowuiherygrsygheriuygowpht4c5nheovimc5wgeotrwaefcg
                                             qfyohmycigupewmzdruewf
@@ -150,7 +150,7 @@
 
 
     <!-- Page-specific code -->
-    <script src="./landing.js"></script>
+    <script src="../profile.js"></script>
 </body>
 
 </html>

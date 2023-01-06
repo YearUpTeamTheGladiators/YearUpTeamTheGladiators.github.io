@@ -8,7 +8,10 @@ window.onload = init;
 
 function init () {
     postBtn.onclick = postBtncClicked;
-    populateProfileName();
+    let profileName = document.getElementById("profileName");
+    let recentPostName = document.getElementById("recentPostName");
+    useProfileName(profileName);
+    useProfileName(recentPostName);
 }
 
 function postBtncClicked () {
@@ -30,11 +33,10 @@ function postBtncClicked () {
     })
 }
 
-function populateProfileName () {
-    let profileName = document.getElementById("profileName");
+function useProfileName (place) {
     let loginData = getLoginData();
 
-    profileName.innerHTML = loginData.username;
+    place.innerHTML = loginData.username;
 }
 
 

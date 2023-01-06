@@ -30,16 +30,16 @@ function displayUserPost() {
             
             postUsername.classList.add('postUserName')
             postContent.classList.add('postContent')
-            postCreation.classList.add('postCreation')  
-            postOutput.classList.add('postOutput')  
+            postCreation.classList.add('postCreation','mx-5','px-5')  
+            postOutput.classList.add('postOutput','card-header','mb-5')  
 
             postOutput.appendChild(postUsername);
             postOutput.appendChild(postContent);
             postOutput.appendChild(postCreation);
             
     
-          postUsername.innerHTML = `<h7 <span class='fw-bold'> ${data[i].username} </span></h7> `
-          postContent.innerHTML = `<h8 <span class='fw-bold'> <br>  ${data[i].text}  <br> </span></h8> `
+          postUsername.innerHTML = `<h7 <span class='fw-normal'>User: ${data[i].username} </span></h7> `
+          postContent.innerHTML = `<h8 <span class='fw-bold'> <br> "${data[i].text}" <br> </span></h8> `
           postCreation.innerHTML = `<small> ${prettyDate(data[i].createdAt)} <small>`
           
         postOutputList.appendChild(postOutput);
@@ -58,8 +58,17 @@ function prettyDate (date) {
     let month = months[givenDate.getMonth()];
     let year = givenDate.getFullYear();
     let dayOfWeek = days[givenDate.getDay()];
-    let prettyDate = `${dayOfWeek}, ${month} ${day}, ${year}`
+    let hours = givenDate.getHours();
+    let minutes = givenDate.getMinutes();
+    if (hours <= 12){
+        let prettyDate = `${dayOfWeek}, ${month} ${day}, ${year} at ${hours}:${minutes.toString(10).padStart(2, '0')} AM`
+        return prettyDate;
+    }
+    else {
+        let prettyDate = `${dayOfWeek}, ${month} ${day}, ${year} at ${hours - 12}:${minutes.toString(10).padStart(2, '0')} PM`
+        return prettyDate;
+    }
 
-    return prettyDate;
+    
 }
 
