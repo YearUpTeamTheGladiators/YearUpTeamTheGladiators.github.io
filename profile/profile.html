@@ -22,7 +22,7 @@
     <script src="/auth.js"></script>
     <script>
         if (isLoggedIn() === false) window.location.replace("/");
-    </script> 
+    </script>
 </head>
 
 
@@ -49,8 +49,8 @@
                             </a>
                         </li>
                         <li>
-                            <a href="#" id="signoutBtn" class="btn py-3" title="Sign out"
-                                data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Customers">
+                            <a href="#" id="signoutBtn" class="btn py-3" title="Sign out" data-bs-toggle="tooltip"
+                                data-bs-placement="right" data-bs-original-title="Customers">
                                 <i class="bi bi-person-x-fill fs-2 text-dark"></i>
                             </a>
                         </li>
@@ -75,25 +75,24 @@
                                 </div>
                                 <!-- Name, Lastname -->
                                 <div id="profileName" class="ms-3 fs-1 fw-bold" style="margin-top: 130px;">
-                                    
+
                                 </div>
                             </div>
                             <!-- Bio cardBody -->
                             <div class="card-body  p-4 text-white">
-                                <div class="mb-5">
-                                    <p class="lead fw-normal mb-2">Bio</p>
-                                    <div class="p-4 rounded-3" style="background-color: #502c73;">
-                                        <p></p>
-                                    </div>
-                                    <button id="postBtn" type="button" class="btn btn-outline-light mt-3"
-                                    data-mdb-ripple-color="dark">
-                                    Post bio
-                                </button>
-                                </div>
-                                <div class="d-flex justify-content-between align-items-center">
-                                    <p class="lead fw-normal mb-1">Post it</p>
-                                </div>
+
                                 <div class="mb-3 mt-1">
+                                    <p class="lead fw-normal">Bio</p>
+                                    <textarea class="form-control text-white p-3 bg-dark" rows="5" id="bioTextField"
+                                        name="text" placeholder="Create bio"></textarea>
+
+                                </div>
+                                <button id="bioBtn" type="button" class="btn btn-outline-light mt-3"
+                                    data-mdb-ripple-color="dark">
+                                    Post It!
+                                </button>
+                                <div class="mb-3 mt-1">
+                                    <p class="lead fw-normal mt-4">Post</p>
                                     <textarea class="form-control text-white p-3 bg-dark" rows="5" id="postTextField"
                                         name="text" placeholder="What do you want to post?"></textarea>
                                 </div>
@@ -107,8 +106,9 @@
                                         <img src="/images/profileblank.jpg" alt="profile picture" id="profilePicture"
                                             class="img-fluid rounded-circle">
                                         <span id="recentPostName"></span>
-                                        <p class="my-4 fs-6 fw-normal">
-                                        </p>
+
+                                        <p id="recentPostTextField" class="my-4 fs-6 fw-normal"></p>
+
                                     </div>
                                 </div>
 
