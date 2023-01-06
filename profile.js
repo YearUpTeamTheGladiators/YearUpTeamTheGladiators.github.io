@@ -10,8 +10,12 @@ function init () {
     postBtn.onclick = postBtncClicked;
     let profileName = document.getElementById("profileName");
     let recentPostName = document.getElementById("recentPostName");
-    useProfileName(profileName);
+    useFullName(profileName);
     useFullName(recentPostName);
+    let bioBtn = document.getElementById("bioBtn");
+    bioBtn.onclick = bioBtnClicked();
+    let bioTextField = document.getElementById("bioTextField");
+    bioTextField.value = localStorage.getItem("bioText")
 }
 
 function postBtncClicked () {
@@ -31,6 +35,8 @@ function postBtncClicked () {
     .then(json => {
         console.log("post successful");
     })
+
+    document.getElementById("recentPostTextField").innerHTML = postTextField.value;
 }
 
 function useProfileName (place) {
@@ -53,6 +59,11 @@ function useFullName (place) {
     })
 }
 
+function bioBtnClicked () {
+    let bioTextField = document.getElementById("bioTextField");
+    bioTextField.value = bioTextField.value
+    localStorage.setItem('bioText', bioTextField.value);
+}
 
 signoutBtn.onclick = function () {
     logout()
