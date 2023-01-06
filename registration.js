@@ -9,10 +9,12 @@ registrationForm.onsubmit = function (event) {
     // as it will do by default when the Submit event is triggered:
     event.preventDefault();
 
+    let name = `${registrationForm.nameField.value} ${registrationForm.lastNameField.value}`
+
     const registrationData = {
         username: registrationForm.usernameField.value,
         password: registrationForm.passwordField.value,
-        fullName: `${registrationForm.nameField.value} ${registrationForm.lastNameField.value}`,
+        fullName: name,
     }
 
     // Disables the button after the form has been submitted already:
@@ -24,8 +26,13 @@ registrationForm.onsubmit = function (event) {
 function register(userData) {
     fetch(`https://microbloglite.herokuapp.com/api/users`, {
         method: "POST",
-        body: userData
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(userData)
     })
     .then(result => result.json())
-    .then(window.location.href = "index.html");
+    .then(user => {
+        window.location.href = "index.html"
+    });
 }
