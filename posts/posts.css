@@ -70,4 +70,41 @@ body {
   }
 
 
+/*Footer*/
+.footer {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 30px 0;
+  
+}
 
+.fa-brands {
+  color: #502C73;
+  font-size: 20px;
+}
+.fa-brands:hover{
+  transition: transform .2s;
+  transform: scale(1.5);
+}
+
+.footer p {
+  font-size: 0.938rem;
+  color: #fff;
+}
+
+.social {
+  display: flex;
+  align-items: flex-start;
+  column-gap: 1rem;
+
+}
+
+.social .bx {
+  font-size: 2rem;
+  color: var(--text-color);
+}
+
+.social .bx:hover {
+  color: var(--second-color);
+  transition: 0.3s all linear;
+}
