@@ -44,7 +44,7 @@ function postBtncClicked () {
 function useProfileName (place) {
     let loginData = getLoginData();
 
-    place.innerHTML = loginData.username;
+    place.innerHTML = getLoginData().;
 }
 
 function useFullName (place) {
