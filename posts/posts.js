@@ -30,7 +30,7 @@ function displayUserPost() {
             
             postUsername.classList.add('postUserName')
             postContent.classList.add('postContent')
-            postCreation.classList.add('postCreation','mx-5','px-5')  
+            postCreation.classList.add('postCreation') 
             postOutput.classList.add('postOutput','card-header','mb-5')  
 
             postOutput.appendChild(postUsername);
