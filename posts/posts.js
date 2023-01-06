@@ -58,8 +58,17 @@ function prettyDate (date) {
     let month = months[givenDate.getMonth()];
     let year = givenDate.getFullYear();
     let dayOfWeek = days[givenDate.getDay()];
-    let prettyDate = `${dayOfWeek}, ${month} ${day}, ${year}`
+    let hours = givenDate.getHours();
+    let minutes = givenDate.getMinutes();
+    if (hours <= 12){
+        let prettyDate = `${dayOfWeek}, ${month} ${day}, ${year} at ${hours}:${minutes.toString(10).padStart(2, '0')} AM`
+        return prettyDate;
+    }
+    else {
+        let prettyDate = `${dayOfWeek}, ${month} ${day}, ${year} at ${hours - 12}:${minutes.toString(10).padStart(2, '0')} PM`
+        return prettyDate;
+    }
 
-    return prettyDate;
+    
 }
 
