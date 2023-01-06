@@ -20,9 +20,9 @@
 
     <!-- Run BEFORE page is finished loading (before window.onload): -->
     <script src="/auth.js"></script>
-    <!-- <script>
+    <script>
         if (isLoggedIn() === false) window.location.replace("/");
-    </script>  -->
+    </script> 
 </head>
 
 
@@ -49,7 +49,7 @@
                             </a>
                         </li>
                         <li>
-                            <a href="/index.html" id="signoutBtn" class="btn py-3" title="Sign out"
+                            <a href="#" id="signoutBtn" class="btn py-3" title="Sign out"
                                 data-bs-toggle="tooltip" data-bs-placement="right" data-bs-original-title="Customers">
                                 <i class="bi bi-person-x-fill fs-2 text-dark"></i>
                             </a>
@@ -150,7 +150,7 @@
 
 
     <!-- Page-specific code -->
-    <script src="./landing.js"></script>
+    <script src="../profile.js"></script>
 </body>
 
 </html>
