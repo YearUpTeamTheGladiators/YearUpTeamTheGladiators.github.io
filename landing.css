@@ -111,9 +111,9 @@ li {
 /*Footer*/
 .footer {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+  justify-content: space-evenly;
   padding: 30px 0;
+  
 }
 
 .fa-brands {
@@ -131,8 +131,9 @@ li {
 
 .social {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   column-gap: 1rem;
+
 }
 
 .social .bx {
