@@ -30,16 +30,16 @@ function displayUserPost() {
             
             postUsername.classList.add('postUserName')
             postContent.classList.add('postContent')
-            postCreation.classList.add('postCreation')  
-            postOutput.classList.add('postOutput')  
+            postCreation.classList.add('postCreation','mx-5','px-5')  
+            postOutput.classList.add('postOutput','card-header','mb-5')  
 
             postOutput.appendChild(postUsername);
             postOutput.appendChild(postContent);
             postOutput.appendChild(postCreation);
             
     
-          postUsername.innerHTML = `<h7 <span class='fw-bold'> ${data[i].username} </span></h7> `
-          postContent.innerHTML = `<h8 <span class='fw-bold'> <br>  ${data[i].text}  <br> </span></h8> `
+          postUsername.innerHTML = `<h7 <span class='fw-normal'>User: ${data[i].username} </span></h7> `
+          postContent.innerHTML = `<h8 <span class='fw-bold'> <br> "${data[i].text}" <br> </span></h8> `
           postCreation.innerHTML = `<small> ${prettyDate(data[i].createdAt)} <small>`
           
         postOutputList.appendChild(postOutput);
