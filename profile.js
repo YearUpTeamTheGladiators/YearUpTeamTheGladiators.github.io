@@ -11,7 +11,7 @@ function init () {
     let profileName = document.getElementById("profileName");
     let recentPostName = document.getElementById("recentPostName");
     useProfileName(profileName);
-    useProfileName(recentPostName);
+    useFullName(recentPostName);
 }
 
 function postBtncClicked () {
@@ -37,6 +37,20 @@ function useProfileName (place) {
     let loginData = getLoginData();
 
     place.innerHTML = loginData.username;
+}
+
+function useFullName (place) {
+    let loginData = getLoginData();
+    fetch(`https://microbloglite.herokuapp.com/api/users/${loginData.username}`, {
+        method: "GET",
+        headers: {"Authorization": `Bearer ${loginData.token}`,
+                "Content-type":
+                "application/json; charset=UTF-8"}
+    })
+    .then(response => response.json())
+    .then(data => {
+        place.innerHTML = data.fullName;
+    })
 }
 
 
