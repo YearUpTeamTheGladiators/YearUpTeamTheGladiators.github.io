@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
 
     <!-- Global CSS (CSS rules you want applied to all pages) -->
     <link rel="stylesheet" href="/global.css">
@@ -14,8 +16,11 @@
     <!-- Page-specific CSS -->
     <link rel="stylesheet" href="posts.css">
 
-     <!--IconScout CDN-->
-     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <!--IconScout CDN-->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+
 
     <title>/POSTS</title>
 
@@ -25,27 +30,47 @@
         if (isLoggedIn() === false) window.location.replace("/");
     </script>
 </head>
+
 <body>
     <header>
-        <nav id="Navbar" class="navbar navbar-expand-lg mb-3 navbar-dark bg-dark shadow-sm ">
-            <div class="container ">
-              <img src="/images/highLIGHT_logo.JPG" alt="">
-              <div class="search-bar">
-                <i class="uil uil-search"></i>
-                <input type="search" placeholder="Search for Creators, Inspriartion, and projects">
-            </div>
-            <div class="create">
-                <label class="btn btn-primary" for="create-post">New Post</label>
-                <div class="profile-photo">
-                    <img src="">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-1 col-md-1 col-lg-1 col-xl-1 col-xxl-1">
+                    <div class="d-flex flex-sm-column flex-row flex-nowrap  align-items-center ">
+    
+                        <ul
+                            class="nav nav-pills nav-flush flex-sm-column flex-row flex-nowrap text-center align-items-center" id="sideNavBar" >
+                            <li class="nav-item">
+                                <a href="/posts/index.html" id="homeBtn" class="btn py-3" title="Feed" data-bs-toggle="tooltip" data-bs-placement="right"
+                                    data-bs-original-title="Home">
+                                    <i class="bi-pencil-square fs-2 text-dark"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="" id="profileBtn" class="btn py-3" title="Profile" data-bs-toggle="tooltip"
+                                    data-bs-placement="right" data-bs-original-title="Products">
+                                    <i class="bi bi-person-fill fs-2 text-dark"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/index.html" id="signoutBtn" class="btn py-3" title="Sign out" data-bs-toggle="tooltip"
+                                    data-bs-placement="right" data-bs-original-title="Customers">
+                                    <i class="bi bi-person-x-fill fs-2 text-dark"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-            </div>
-            </div>
-          </nav>
-        </header>
 
 
-   <!-----------------------------------======================== - MAIN -- ========================================----------------->
+
+
+            </div>
+        </div>
+    </header>
+
+
+    <!-----------------------------------======================== - MAIN -- ========================================----------------->
     <main>
         <div class="container">
             <!---------------------------------======================Left===============-------------------------------------------->
@@ -74,7 +99,8 @@
                         <h3>Explore</h3>
                     </a>
                     <a class="menu-item" id="notifications">
-                        <span><i class="uil uil-bell"><small class="notification-count">9+</small></i></span>
+                        <span><i class="uil uil-bell"><small
+                                    class="notification-count">9+</small></i></span>
                         <h3>Notifications</h3>
                         <!-------------Notification PopUp----------->
                         <div class="notifications-popup">
@@ -127,7 +153,8 @@
                         <!-------------------End Of Popup Notifications ----------------------->
                     </a>
                     <a class="menu-item" id="message-notification">
-                        <span><i class="uil uil-envelope-alt"><small class="notification-count">6</small></i></span>
+                        <span><i class="uil uil-envelope-alt"><small
+                                    class="notification-count">6</small></i></span>
                         <h3>Message</h3>
                     </a>
                     <a class="menu-item">
@@ -157,10 +184,10 @@
 
             <!--====================================Middle====================================-->
             <div class="middle">
-                
 
-            
-            <!---------------------------------------- End of middle ----------->
+
+
+                <!---------------------------------------- End of middle ----------->
                 <form class="create-post">
                     <div class="profile-photo">
                         <img src="">
@@ -174,18 +201,19 @@
                 <div class="feeds" id="postOutputList">
 
                     <!-----------------------First Feed--------------------->
+                    <div id="postOutput">
+                    </div>
 
-                   
 
                     <!--------------------End Of Feed1 ----------------------->
 
-                   
 
-                <!----------------------------End of Middle section div------------------------------------>
+
+                    <!----------------------------End of Middle section div------------------------------------>
+                </div>
+
+                <!----------------------------End of Middle ----------------------------------->
             </div>
-
-            <!----------------------------End of Middle ----------------------------------->
-        </div>
 
 
 
@@ -288,15 +316,15 @@
                             <div>
                                 <h5>Hajia Bintu</h5>
                                 <p class="text-muted">8 mutual friends</p>
-                                </div>
                             </div>
-                            <div class="action">
-                                <button class="btn btn-primary">
-                                    Accept
-                                </button>
-                                <button class="btn">
-                                    Decline
-                                </button>
+                        </div>
+                        <div class="action">
+                            <button class="btn btn-primary">
+                                Accept
+                            </button>
+                            <button class="btn">
+                                Decline
+                            </button>
                         </div>
                     </div>
                     <!--Request-->
@@ -308,15 +336,15 @@
                             <div>
                                 <h5>Nina Chi</h5>
                                 <p class="text-muted">9 mutual friends</p>
-                                </div>
                             </div>
-                            <div class="action">
-                                <button class="btn btn-primary">
-                                    Accept
-                                </button>
-                                <button class="btn">
-                                    Decline
-                                </button>
+                        </div>
+                        <div class="action">
+                            <button class="btn btn-primary">
+                                Accept
+                            </button>
+                            <button class="btn">
+                                Decline
+                            </button>
                         </div>
                     </div>
                     <!--request -->
@@ -328,15 +356,15 @@
                             <div>
                                 <h5>Nancy Buetta</h5>
                                 <p class="text-muted">2 mutual friends</p>
-                                </div>
                             </div>
-                            <div class="action">
-                                <button class="btn btn-primary">
-                                    Accept
-                                </button>
-                                <button class="btn">
-                                    Decline
-                                </button>
+                        </div>
+                        <div class="action">
+                            <button class="btn btn-primary">
+                                Accept
+                            </button>
+                            <button class="btn">
+                                Decline
+                            </button>
                         </div>
                     </div>
                     <!--request---->
@@ -348,15 +376,15 @@
                             <div>
                                 <h5>Chrisean Rock</h5>
                                 <p class="text-muted">121 mutual friends</p>
-                                </div>
                             </div>
-                            <div class="action">
-                                <button class="btn btn-primary">
-                                    Accept
-                                </button>
-                                <button class="btn">
-                                    Decline
-                                </button>
+                        </div>
+                        <div class="action">
+                            <button class="btn btn-primary">
+                                Accept
+                            </button>
+                            <button class="btn">
+                                Decline
+                            </button>
                         </div>
                     </div>
                     <!--request-->
@@ -368,15 +396,15 @@
                             <div>
                                 <h5>Lisa James</h5>
                                 <p class="text-muted">8 mutual friends</p>
-                                </div>
                             </div>
-                            <div class="action">
-                                <button class="btn btn-primary">
-                                    Accept
-                                </button>
-                                <button class="btn">
-                                    Decline
-                                </button>
+                        </div>
+                        <div class="action">
+                            <button class="btn btn-primary">
+                                Accept
+                            </button>
+                            <button class="btn">
+                                Decline
+                            </button>
                         </div>
                     </div>
                     <!--end of request-->
@@ -389,7 +417,7 @@
     </main>
 
     <!--=================================================== Theme Customization ===================================================-------------------->
-    
+
     <div class="customize-theme">
         <div class="card">
             <h2>Customize your view</h2>
@@ -398,54 +426,54 @@
             <!---------- Font Sizes -------------------->
             <div class="font-size">
                 <h4>Font Size</h4>
-               <div>
-                 <h6>Aa</h6>
-                 <div class="choose-size">
-                    <span class="font-size-1"></span>
-                    <span class="font-size-2 active"></span>
-                    <span class="font-size-3"></span>
-                    <span class="font-size-4"></span>
-                    <span class="font-size-5  "></span>
-                 </div>
-                 <h3>Aa</h3>
-               </div>
+                <div>
+                    <h6>Aa</h6>
+                    <div class="choose-size">
+                        <span class="font-size-1"></span>
+                        <span class="font-size-2 active"></span>
+                        <span class="font-size-3"></span>
+                        <span class="font-size-4"></span>
+                        <span class="font-size-5  "></span>
+                    </div>
+                    <h3>Aa</h3>
+                </div>
             </div>
-        
 
-        <!-------------- Primary Colors ---------------------------->
-        <div class="color">
-            <h4>Color</h4>
-            <div class="choose-color">
-                <span class="color-1 active"></span>
-                <span class="color-1"></span>
-                <span class="color-1"></span>
-                <span class="color-1"></span>
-                <span class="color-1"></span>
-            </div>
-        </div>
 
-        <!----------- Background Colors ------------------------>
-        <div class="background">
-            <h4>Background</h4>
-            <div class="choose-bg">
-                <div class="bg-1 active">
-                    <span></span>
-                    <h5 for="bg-1">Light</h5>
+            <!-------------- Primary Colors ---------------------------->
+            <div class="color">
+                <h4>Color</h4>
+                <div class="choose-color">
+                    <span class="color-1 active"></span>
+                    <span class="color-1"></span>
+                    <span class="color-1"></span>
+                    <span class="color-1"></span>
+                    <span class="color-1"></span>
                 </div>
-                <div class="bg-2">
-                    <span></span>
-                    <h5 for="bg-2">Dim</h5>
-                </div>
-                <div class="bg-3">
-                    <span></span>
-                    <h5 for="bg-3">Lights Out</h5>
+            </div>
+
+            <!----------- Background Colors ------------------------>
+            <div class="background">
+                <h4>Background</h4>
+                <div class="choose-bg">
+                    <div class="bg-1 active">
+                        <span></span>
+                        <h5 for="bg-1">Light</h5>
+                    </div>
+                    <div class="bg-2">
+                        <span></span>
+                        <h5 for="bg-2">Dim</h5>
+                    </div>
+                    <div class="bg-3">
+                        <span></span>
+                        <h5 for="bg-3">Lights Out</h5>
+                    </div>
                 </div>
             </div>
         </div>
-        </div>
-        </div>
-    
-       
+    </div>
+
+
 
 
     </main>
@@ -454,9 +482,12 @@
 
 
     <!-- Bootstrap Bundle (including Popper for popovers) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+        crossorigin="anonymous"></script>
 
     <!-- Page-specific code -->
     <script src="posts.js"></script>
 </body>
+
 </html>
