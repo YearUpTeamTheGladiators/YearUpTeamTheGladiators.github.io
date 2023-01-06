@@ -14,7 +14,7 @@ function displayUserPost() {
 
     let postOutputList = document.getElementById("postOutputList")
     postOutputList.innerHTML = "";
-    fetch("https://microbloglite.herokuapp.com/api/posts", {
+    fetch("https://microbloglite.herokuapp.com/api/posts?limit=500&offset=0", {
         method: "GET", 
         headers: {"Authorization": `Bearer ${loginData.token}`,
                 "Content-type":
@@ -22,7 +22,7 @@ function displayUserPost() {
     })
     .then(response => response.json())
     .then(data =>   {
-        for(let i=0; i<data.length; i++) {
+        for(let i=data.length-1; i>=0; i--) {
             let postOutput = document.createElement("div")
             let postUsername = document.createElement("div")
             let postContent = document.createElement("div")
